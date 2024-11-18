@@ -4,21 +4,28 @@ import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
+from functools import lru_cache
 
 app = Flask(__name__)
-
-# Load the preprocessed dataset
-df = pd.read_parquet('recipes_preprocessed.parquet')
 
 # List of macronutrient columns
 macros = ['Calories', 'FatContent', 'CarbohydrateContent', 'ProteinContent']
 
-# Convert macro columns to numpy arrays for faster computation
-macro_values = df[macros].values.astype(float)
+# Lazy loading for the dataset
+@lru_cache(maxsize=1)
+def load_data():
+    print("Loading dataset...")
+    df = pd.read_parquet('recipes_preprocessed.parquet')
+    return df
 
 # Fit the CountVectorizer and transform the ingredients
-vectorizer = CountVectorizer()
-ingredient_matrix = vectorizer.fit_transform(df['Ingredients'].astype(str))
+@lru_cache(maxsize=1)
+def fit_vectorizer():
+    print("Fitting vectorizer...")
+    df = load_data()
+    vectorizer = CountVectorizer()
+    ingredient_matrix = vectorizer.fit_transform(df['Ingredients'].astype(str))
+    return vectorizer, ingredient_matrix
 
 # Flask API endpoint for recommendations
 @app.route('/recommend', methods=['POST'])
@@ -26,7 +33,14 @@ def recommend():
     data = request.json
     user_macros = data.get('user_macros', {})
     user_favorites = data.get('user_favorites', [])
-
+    
+    # Load dataset and vectorizer
+    df = load_data()
+    vectorizer, ingredient_matrix = fit_vectorizer()
+    
+    # Precomputed macro values
+    macro_values = df[macros].values.astype(float)
+    
     # Create user ingredient vector
     user_ingredient_vector = vectorizer.transform([' '.join(user_favorites)])
 
@@ -51,8 +65,7 @@ def recommend():
 
     # Prepare the result
     recommendations = []
-    for idx in range(len(top_recipes)):
-        row = top_recipes.iloc[idx]
+    for idx, row in top_recipes.iterrows():
         recommendations.append({
             'name': row['Name'],
             'author': row.get('AuthorName', 'Unknown'),
@@ -80,7 +93,7 @@ def recommend():
             'yield': row.get('RecipeYield', ''),
             'rating': row.get('AggregatedRating', 0),
             'review_count': row.get('ReviewCount', 0),
-            'overall_score': float(overall_score[top_indices[idx]])
+            'overall_score': float(overall_score[idx])
         })
 
     return jsonify(recommendations)
