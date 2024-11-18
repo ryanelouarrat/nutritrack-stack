@@ -1,4 +1,3 @@
-# Use the official MySQL 8.0 image
 FROM mysql:8.0
 
 # Set environment variables for MySQL
@@ -7,8 +6,8 @@ ENV MYSQL_DATABASE=nutritrack
 ENV MYSQL_USER=user
 ENV MYSQL_PASSWORD=userpassword
 
-# Expose MySQL default port
-EXPOSE 3306
+# Expose MySQL and a web-based management tool (Adminer/phpMyAdmin)
+EXPOSE 3306 8080
 
-# Start MySQL
+# Start MySQL server
 CMD ["mysqld"]
