@@ -1,0 +1,1253 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 6px;
+  background-color: #a4c876;
+  border: 1px solid #a4c876;
+  box-shadow: inset 0 0 6px #a4c876;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: gray;
+}
+h5,
+h3 {
+  font-family: "Funnel Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.dashboardContainer {
+  display: flex;
+  height: 100vh;
+  min-height: 100vh !important;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+.sidebar {
+  width: 25%;
+  background-color: #bce08a;
+  color: white;
+  padding: 40px 0 40px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.logoutButton {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  margin-top: auto;
+  color: red;
+  font-size: 16px;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.logoutButton:hover {
+  color: rgba(255, 0, 0, 0.536);
+}
+
+.logoutButton svg {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.sidebar h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.fchld {
+  width: 44vw;
+  height: 40vh;
+}
+
+.todaysmeals {
+  border-left: #333 solid 1px;
+  height: auto;
+}
+
+.sidebar p {
+  font-size: 0.9vw;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.sidebar li {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 10px 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.sidebar li:hover {
+  color: #ffffff;
+}
+
+.sidebar .active {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.sidebar li:not(:last-child) {
+  margin-bottom: 15px;
+}
+.mainContent {
+  flex: 1;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.backgroundLayer {
+  background-color: #bce08a;
+  padding: 15px 15px 15px 0px;
+  /* height: 100%; */
+  width: 100%;
+}
+
+.mainContent {
+  background-color: white;
+  border-radius: 15px;
+}
+
+.header h1 {
+  font-size: 32px;
+  font-family: "Funnel Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding: 10px 0 0 20px;
+}
+
+.mainWidgets {
+  display: flex;
+  height: 60%;
+  width: 100%;
+}
+
+.progressSection,
+.mealsSection,
+.weightSection {
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 12px;
+}
+
+.progressSection {
+  flex: 1;
+  height: 110%;
+}
+
+.mealsSection {
+  flex: 1;
+}
+
+.verticalLine {
+  width: 2px;
+  background-color: #ccc;
+  height: 80%;
+  align-self: center;
+}
+
+.progressCharts {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+  justify-content: space-around;
+}
+
+.spiralChart {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+}
+
+.chartCenter {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+}
+
+.percentage {
+  color: #333;
+  font-size: 8px;
+}
+
+.chartLabel {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.mealList {
+  list-style: none;
+  padding: 0;
+}
+
+.mealList li {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s;
+}
+
+.mealList li:hover {
+  background-color: #f3f4f6;
+}
+
+.weightSection {
+  width: 23vw;
+  background: #f1f1f1;
+  padding: 20px;
+  border-radius: 12px;
+  height: 90%;
+}
+
+.weightChart {
+  height: auto;
+  background: #e5e7eb;
+  margin-bottom: 10px;
+}
+
+.logButton {
+  background-color: #3b82f6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logButton:hover {
+  background-color: #2563eb;
+}
+.circularProgressContainer {
+  position: relative;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.progressTextCenter {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.progressQuote {
+  text-align: center;
+  margin-top: 10px;
+  font-size: clamp(2px, 1vw, 12px);
+  color: #555;
+  font-style: italic;
+}
+.weekly-log1-widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.daily-log-details {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.meal-detail {
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.calendar .rbc-toolbar-label {
+  width: 1000vw !important;
+}
+.macroCard {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.macroCard h5 {
+  color: #202224;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.macroCard p {
+  color: #202224;
+  font-family: "Nunito Sans";
+  font-size: 2vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+.mealCategoryContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.mealCategory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emojiIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: #f9f9f9;
+  font-size: 1.5em;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+}
+
+.mealCategory p {
+  font-size: 0.9em;
+  margin: 0;
+  text-align: center;
+}
+
+.mealCategory:hover .emojiIcon {
+  transform: scale(1.05);
+}
+
+.active .emojiIcon {
+  border: 2px solid #bce08a;
+  box-shadow: 0px 4px 12px rgba(255, 165, 0, 0.3);
+}
+
+.searchBarContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.searchBar {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.selectFromFavorites {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.dropdownIcon {
+  margin-left: 5px;
+  font-size: 0.8em;
+}
+
+.foodItemContainer {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.foodItemPlaceholder {
+  width: 60px;
+  height: 60px;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 0.8em;
+  color: #666;
+  margin-right: 10px;
+}
+
+.foodItemDetails {
+  font-size: 0.9em;
+  color: #333;
+}
+
+.addMealContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.addMealButton {
+  flex: 1;
+  padding: 10px;
+  font-size: 1em;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.favoriteIconButton {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  color: #007bff;
+  background-color: #f4f4f4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.favoriteInput {
+  flex: 1;
+  padding: 10px;
+  font-size: 1em;
+  color: #ffffff;
+  background-color: #6abf4b !important;
+  display: inline-block;
+  width: 80%;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+  width: 100%;
+}
+.btn-favorite {
+  width: 20%;
+  display: inline-block;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  color: #6c757d;
+  text-align: center;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-favorite-selected {
+  width: 20%;
+  display: inline-block;
+  background-color: #ffc107;
+  border: 1px solid #ffca2c;
+  color: #fff;
+  text-align: center;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-favorite:hover,
+.btn-favorite-selected:hover {
+  background-color: #e0e0e0;
+}
+.selectedFood {
+  height: 76%;
+  overflow: auto;
+}
+
+.selectedFood::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.selectedFood::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+
+.selectedFood::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #6abf4b;
+}
+.bar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(122, 122, 122, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.bar::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+}
+
+.bar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #6abf4b;
+}
+.ulFood li {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.customCalendar {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.calendarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.weekday {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0;
+  background-color: #f0f0f0;
+}
+
+.day {
+  min-height: 100px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+.day:hover {
+  background-color: #f9f9f9;
+}
+
+.day span {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-weight: bold;
+}
+
+.day ul {
+  list-style: none;
+  padding: 20px 5px 5px 5px;
+  margin: 0;
+}
+
+.day button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #007bff;
+  text-decoration: underline;
+  font-size: 0.75rem;
+}
+
+.dtl {
+  font-size: 12px;
+}
+
+.macroText {
+  font-size: 12px;
+}
+
+.mealsListContainer {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.mealsListContainer::-webkit-scrollbar {
+  width: 10px;
+}
+
+.mealsListContainer::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: #e7e7e7;
+  border: 1px solid #cacaca;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.mealsListContainer::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: gray;
+}
+
+.mealsList {
+  list-style: none;
+  padding: 0;
+}
+
+.mealItem {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.mealItem:last-child {
+  border-bottom: none;
+}
+
+.mealEmoji {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.mealItem span {
+  font-weight: bold;
+  color: #333;
+}
+
+.mealItem span[style] {
+  color: #00c853;
+}
+
+.mealItem:hover {
+  background-color: #eaf0f1;
+  cursor: pointer;
+}
+
+.mealItem ul {
+  margin-top: 5px;
+  padding-left: 20px;
+}
+
+.mealItem li {
+  font-size: 12px;
+  color: #555;
+}
+.foodEmoji {
+  font-size: 14px;
+  margin-right: 6px;
+}
+.react-calendar button {
+  color: #000;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #333333;
+}
+
+.container {
+  width: 100%;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555555;
+}
+
+.input,
+.select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.input:focus,
+.select:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.foodTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-height: 150px;
+  overflow-y: auto;
+
+  padding: 5px 10px;
+  height: 60px;
+}
+.foodTags::-webkit-scrollbar {
+  display: none;
+}
+.foodTag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0px 10px;
+  font-size: 0.9rem;
+  background-color: #e0f7fa;
+  color: #00796b;
+  border-radius: 16px;
+  border: 1px solid #b2dfdb;
+  height: 40px;
+}
+
+.deleteButton {
+  background: none;
+  border: none;
+  color: #e57373;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.deleteButton:hover {
+  color: #d32f2f;
+}
+
+.deleteButton:focus {
+  outline: none;
+}
+
+.foodItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  background-color: #f9f9f9;
+}
+
+.deleteButton {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s;
+  width: 5%;
+}
+
+.deleteButton:hover {
+  color: #c0392b;
+}
+
+.customFoodContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.noMealsMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 1rem;
+  color: #555;
+  background-color: #f9f9f9;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.noMealsMessage p {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.addButton {
+  padding: 10px 16px;
+  background-color: #2ecc71;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 10%;
+  font-weight: 700;
+}
+
+.addButton:disabled {
+  background-color: blue;
+  cursor: not-allowed;
+}
+
+.addButton:hover:not(:disabled) {
+  background-color: #27ae60;
+}
+
+.buttonGroup {
+}
+
+.saveButton,
+.passwordButton {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Funnel Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.saveButton {
+  background-color: #3498db;
+  color: #ffffff;
+}
+
+.saveButton:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.saveButton:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.passwordButton {
+  background-color: #f93943;
+  color: #ffffff;
+}
+
+.passwordButton:hover {
+  background-color: #8e44ad;
+}
+.mealList {
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+  .mainContent {
+    padding: 15px;
+  }
+  .fav {
+    min-height: 100%;
+  }
+  .txtF {
+    font-size: 12px;
+  }
+  .mealList {
+  }
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  .passwordButton,.saveButton{
+    height: 50px;
+    font-size: 12px;
+    padding: 5px;
+  }
+  .addButton{
+    width:50%;
+  }
+  .buttonGroup{
+    justify-content: space-evenly !important;
+  }
+}
+
+.custom-modal .modal-content {
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  border: none;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.custom-modal .modal-header {
+  border-bottom: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-modal .modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.custom-modal .close {
+  color: #999;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.custom-modal .modal-body {
+  padding: 10px 20px;
+}
+
+.custom-modal .form-label {
+  color: #555;
+  font-weight: 600;
+}
+
+.custom-modal .form-control {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.custom-modal .text-danger {
+  color: #d9534f;
+}
+
+.custom-modal .modal-footer {
+  border-top: none;
+  padding: 15px 20px;
+}
+
+.custom-modal .btn-secondary {
+  background-color: #ccc;
+  border: none;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.custom-modal .btn-primary {
+  background-color: #2a84e4;
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+.selction {
+  position: fixed;
+  width: 36%;
+  max-height: 300px;
+  overflow-y: auto;
+  background: rgb(248, 249, 250);
+  border-radius: 10px;
+  bottom: 28%;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+  z-index: 1000;
+}
+.custom-modal .btn-primary:hover {
+  background-color: #0056b3;
+}
+.leaf {
+  display: inline-block;
+  margin-left: 13px;
+  width: 20px;
+}
+@media screen and (max-width: 915px) {
+  .navbarTog {
+    width: 25%;
+    border: none !important;
+  }
+  .leaf {
+    filter: brightness(0) saturate(100%);
+    width: 20px;
+    height: 20px;
+  }
+  .bgGreen {
+    background-color: #bce08a;
+    color: #fff;
+  }
+  .mainContent {
+    margin-top: 40px;
+  }
+  .backgroundLayer {
+    padding: 10px 10px 10px 10px;
+    /* height: 100%; */
+  }
+  .dashboardContainer {
+    /* height: 100%; */
+  }
+  .progressSection {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .position-relative {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  .todaysmeals {
+    width: 100%;
+  }
+  .h5title {
+    margin-top: 20px;
+  }
+  .prg {
+    height: 250px;
+    margin: 0 auto;
+  }
+  .header {
+    margin: 0;
+  }
+  .mobileC {
+    width: 100% !important;
+  }
+  .macroCard p {
+    font-size: 14px;
+  }
+  .spiralChart {
+    height: 50px;
+    width: 50px;
+  }
+  .percentage {
+    display: inline-block; /* Ensures the content is inline */
+    text-align: center; /* Center-aligns the text */
+    line-height: 1;
+    font-size: 8px;
+    font-family: "Funnel Display";
+    font-weight: normal;
+  }
+  .backgroundLayer {
+    padding: 15px;
+    border-radius: 0;
+  }
+  .modal-content {
+    width: 100%;
+  }
+  .mainContent {
+    padding: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .mainWidgets {
+    gap: 20px;
+  }
+
+  .progressSection {
+    width: 100%;
+  }
+  .fchld {
+    height: 90%;
+    padding: 0 !important;
+    width: 100%;
+  }
+  .todaysmeals {
+    border-left: none;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .weightSection {
+    width: 100%;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  .poids {
+    width: 100% !important;
+    padding: 0% !important;
+  }
+  .weightChart {
+    height: 60%;
+  }
+  .weightSection {
+    padding: 20px;
+    width: 100%;
+  }
+  .suggestedRecipes {
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .circularProgressContainer {
+    margin: 0 auto;
+  }
+
+  .chartCenter {
+    font-size: 1rem;
+  }
+  .titleS {
+    font-family: "Funnel Display";
+    font-size: 12px;
+  }
+  .mealList {
+    overflow-y: auto;
+  }
+  .progressSection {
+    height: 100%;
+  }
+  .mainWidgets {
+    height: 100%;
+  }
+  .progressQuote {
+    font-size: 10px;
+  }
+  .mobileFullHeight {
+    height: 100%;
+  }
+  .selection {
+    max-height: 300px; /* Limits the dropdown height */
+    overflow-y: auto; /* Adds vertical scrolling if content exceeds max height */
+    overflow-x: hidden; /* Ensures no horizontal overflow */
+    background: #f8f9fa; /* Matches dropdown background */
+    border-radius: 10px; /* Smooth corners */
+    margin-top: 5px; /* Slight space between input and dropdown */
+    padding: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for dropdown */
+    z-index: 1000; /* Ensures it appears above other content */
+    position: absolute; /* Positions it relative to the parent */
+    width: 90%; /* Matches the width of the input field */
+  }
+  .emojiIcon {
+    height: 50px;
+    width: 50px;
+  }
+  .mealCategory {
+    width: 25%;
+  }
+  .nava {
+    margin-right: 0 !important;
+  }
+  .weightContainer .weightChart {
+    height: 80%;
+  }
+  .weightContainer {
+    height: 60%;
+  }
+  .mainContentWeight {
+    height: 90%;
+  }
+  .select{
+    font-size:12px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .backgroundLayer {
+    height: 100%;
+  }
+}
+
+.selection::-webkit-scrollbar {
+  width: 6px;
+}
+
+.selection::-webkit-scrollbar-track {
+  border-radius: 6px;
+  background-color: #a4c876;
+  border: 1px solid #a4c876;
+  box-shadow: inset 0 0 6px #a4c876;
+}
+
+.selection::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: gray;
+}

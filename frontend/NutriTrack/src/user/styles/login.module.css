@@ -1,0 +1,484 @@
+:root {
+  --background: rgba(202, 84, 0, 1);
+  --poppins-font-family: "Inter", Helvetica;
+  --poppins-font-size: 15px;
+  --poppins-font-style: normal;
+  --poppins-font-weight: 700;
+  --poppins-letter-spacing: 0px;
+  --poppins-line-height: 20px;
+  --title-font-family: "Montserrat", Helvetica;
+  --title-font-size: 96px;
+  --title-font-style: normal;
+  --title-font-weight: 400;
+  --title-letter-spacing: 0px;
+  --title-line-height: normal;
+}
+
+.login {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.login .overlap-wrapper {
+  background-color: #ffffff;
+  height: 100%;
+  width: 100vw;
+}
+
+.login .overlap {
+  height: 100%;
+  position: relative;
+}
+
+.login .the-interior-has-a {
+  background-color: #bce08a;
+  height: 458px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.login .text-wrapper {
+  color: #ffffff;
+  font-family: "Funnel Display", Helvetica;
+  margin-left: 20px;
+  font-size: 36px;
+  font-weight: 600;
+  left: 2px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 30px;
+}
+
+.login .group {
+  height: 100%;
+  left: 783px;
+  position: absolute;
+  top: 79px;
+  width: 543px;
+}
+
+.login .overlap-group {
+  background-color: #ffffff;
+  border-radius: 40px;
+  box-shadow: 0px 4px 35px #00000014;
+  height: 80vh;
+  position: relative;
+  width: 539px;
+}
+
+.login .div {
+  height: 116px;
+  left: 20px;
+  position: absolute;
+  top: 44px;
+  width: 456px;
+}
+
+.login .group-2 {
+  height: 46px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 456px;
+}
+
+.login .welcome-to {
+  color: transparent;
+  font-family: "Poppins-Regular", Helvetica;
+  font-size: 21px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+}
+
+.login .span {
+  color: #000000;
+}
+
+.login .text-wrapper-2 {
+  color: #bce08a;
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+}
+
+.login .no-account-sign-up {
+  color: transparent;
+  font-family: "Poppins-Regular", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  left: 366px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 6px;
+}
+
+.login .text-wrapper-3 {
+  color: #8d8d8d;
+}
+
+.login .text-wrapper-4 {
+  color: #bce08a;
+  cursor: pointer;
+}
+
+.login .text-wrapper-5 {
+  color: #000000;
+  font-family: "Poppins-Medium", Helvetica;
+  font-size: 55px;
+  font-weight: 500;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 33px;
+}
+
+.login .frame-wrapper {
+  height: 74px;
+  left: 10px;
+  position: absolute;
+  top: 80px;
+  width: 471px;
+}
+
+.login .frame {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  position: relative;
+  width: 471px;
+}
+
+.login .continue-with-google {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 3px #0000002b, 0px 0px 3px #00000015;
+  height: 54px;
+  position: relative;
+  width: 451px;
+}
+
+.login .frame-2 {
+  align-items: flex-start;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: inline-flex;
+  gap: 15px;
+  left: 95px;
+  padding: 15px;
+  position: relative;
+}
+
+.login .google-logo {
+  height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.login .text-wrapper-6 {
+  color: #0000008a;
+  font-family: "Roboto-Medium", Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.login .group-3 {
+  height: 92px;
+  left: 20px;
+  position: absolute;
+  top: 190px;
+  width: 451px;
+}
+
+.login .text-wrapper-7 {
+  color: #000000;
+  font-family: "Funnel Display", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: -3px;
+}
+
+.login .username-or-email-wrapper {
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #4285f4;
+  border-radius: 9px;
+  height: 57px;
+  left: 0;
+  position: absolute;
+  top: 35px;
+  width: 451px;
+}
+
+.login .text-wrapper-8 {
+  color: #7f7f7f;
+  font-family: "Poppins-Light", Helvetica;
+  font-size: 14px;
+  font-weight: 300;
+  left: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 17px;
+  width: 302px;
+}
+
+.login .group-4 {
+  height: 92px;
+  left: 20px;
+  position: absolute;
+  top: 300px;
+  width: 451px;
+}
+
+.login .div-wrapper {
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #adadad;
+  border-radius: 9px;
+  height: 57px;
+  left: 0;
+  position: absolute;
+  top: 35px;
+  width: 451px;
+}
+
+.login .text-wrapper-9 {
+  color: #4285f4;
+  font-family: "Poppins-Regular", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  left: 387px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  width: 30%;
+  top: 480px;
+}
+
+.login .overlap-group-wrapper {
+  height: 54px;
+  left: 20px;
+  position: absolute;
+  top: 411px;
+  width: 453px;
+  background-color: #bce08a;
+  transition: background-color 0.2s ease 0.2s; /* Transition duration: 0.3s, Delay: 0.2s */
+}
+
+.login .overlap-group-wrapper:hover {
+  background-color: #91b75b;
+}
+
+.login .overlap-2 {
+  background-color: #bce08a;
+  border-radius: 10px;
+  box-shadow: 0px 4px 19px #7793414c;
+  height: 54px;
+  position: relative;
+  width: 451px;
+}
+
+.login .text-wrapper-10 {
+  color: #ffffff;
+  font-family: "Poppins-Medium", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  left: 198px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 16px;
+  width: 56px;
+}
+
+.login .group-5 {
+  height: 224px;
+  left: 73px;
+  position: absolute;
+  top: 150px;
+  width: 398px;
+}
+
+.login .group-6 {
+  height: 87px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 400px;
+}
+
+.login .text-wrapper-11 {
+  color: #ffffff;
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-size: 34px;
+  font-weight: 600;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+}
+
+.login .text-wrapper-12 {
+  color: #ffffff;
+  font-family: "Poppins-Regular", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 51px;
+  width: 396px;
+}
+
+.login .helps-you-easily {
+  color: #ffffff;
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  left: 2px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 109px;
+  width: 311px;
+}
+
+.login .text-wrapper-13 {
+  font-family: "Poppins-SemiBoldItalic", Helvetica;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.login .text-wrapper-14 {
+  font-family: "Poppins-Light", Helvetica;
+  font-weight: 300;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.group-3,
+.group-4 {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--background);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.err {
+  padding-top: 10%;
+}
+.leaf {
+  display: inline-block;
+  width: 50px;
+  margin-left: 13px;
+}
+@media screen and (max-width: 915px) {
+  .login .group-5 {
+    display: none;
+  }
+  .login .group-3 {
+    top: 170px;
+    margin-bottom: 0;
+  }
+  .login .group-4 {
+    top: 280px;
+    margin-bottom: 0;
+  }
+  .login .group {
+    left: 0;
+    top: 150px;
+    width: 100%;
+  }
+  .login .overlap-group {
+    width: 100%;
+    height: 75vh;
+  }
+  .login .div {
+    width: 90%;
+  }
+  .login .group-2 {
+    width: 95%;
+  }
+  .login .frame-wrapper,
+  .login .frame,
+  .login .continue-with-google,
+  .login .group-3,
+  .login .group-4 {
+    width: 95%;
+  }
+  .login .no-account-sign-up{
+    left: 70%;
+    top: 28px;
+    width: 90px;
+  }
+  .login .text-wrapper-9{
+  top: 440px;
+    left: 65%;
+width: auto;
+  }
+  .login .frame-2{
+    left: 10%;
+  }
+  .login .text-wrapper-10{
+    left: 40%;
+  }
+  .login .div-wrapper,
+  .login .username-or-email-wrapper,
+  .login .overlap-group-wrapper{
+    width: 90%;
+  }
+.login .the-interior-has-a{
+  height: 100vh;
+}
+.login .overlap-group-wrapper{
+  top: 380px; 
+}
+.login .text-wrapper-6 {
+font-size: 14px;
+margin-top: 3px;
+}
+}

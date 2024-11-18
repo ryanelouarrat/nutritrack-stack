@@ -1,0 +1,79 @@
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalContent {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    text-align: center;
+}
+.chartContainer {
+    margin: auto;
+}
+.closeButton {
+    margin-top: 20px;
+    background-color: #3b82f6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.iconButton {
+    font-size: 1.5rem;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin: 0px 5px;
+}
+
+.iconButton:hover {
+    color: #ef4444; /* Red for delete icon */
+}
+
+.iconContainer {
+    display: flex;
+    
+}
+.foodItemsContainer {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .foodItemsList {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  .foodItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .foodName {
+    font-weight: 500;
+  }
+  
+  .foodWeight {
+    color: #555;
+  }
+  

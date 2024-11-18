@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+
+.custom-container {
+  background-color: #fff;
+  padding-top: 3%;
+  padding: 3% 10%;
+  border-radius: 10px;
+}
+
+.custom-progress-bar {
+  background-color: #f0f0f0;
+  height: 8px;
+  border-radius: 5px;
+  margin-top: 9px;
+  position: relative;
+}
+
+.custom-progress {
+  background-color: #bce08a;
+  height: 100%;
+  width: 33%; /* Adjust this percentage as needed */
+  border-radius: 5px;
+}
+
+.custom-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #333;
+  font-family: "Poppins";
+  padding-left: 10%;
+  padding-top: 3%;
+}
+
+h2 strong {
+  font-weight: bold;
+  color: #333;
+}
+
+.signup1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.custom-form-group {
+  margin-bottom: 15px;
+  width: 30vw;
+  font-family: "Poppins";
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+  font-family: "Poppins";
+}
+
+.custom-container input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 1em;
+}
+
+input::placeholder {
+  color: #bbb;
+}
+
+.custom-btn {
+  background-color: #bce08a;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 40px;
+  width: 40%;
+  transition: background-color 0.3s ease-in-out 0.2s; /* 0.2s delay */
+
+}
+
+.custom-btn:hover {
+  background-color: #9ccd5e;
+}
+/* Remove border on focus for all input fields */
+input:focus {
+  outline: none; /* Remove the default outline */
+  border: none; /* Remove the border on focus */
+  box-shadow: none; /* Remove any focus shadow */
+}
+.error-text {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  display: block;
+}

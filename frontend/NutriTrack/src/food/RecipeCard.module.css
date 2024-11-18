@@ -1,0 +1,11 @@
+/* src/food/RecipeCard.module.css */
+
+.recipeCard {
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .recipeCard:hover {
+    transform: scale(1.05);
+  }
+  

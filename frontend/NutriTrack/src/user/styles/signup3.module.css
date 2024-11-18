@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+
+  
+  .custom-container {
+    background-color: #fff;
+    padding-top: 3%;
+    border-radius: 10px;
+    text-align: center;
+    padding: 3% 10%;
+
+  }
+  
+  .custom-progress-bar {
+    background-color: #f0f0f0;
+    height: 8px;
+    border-radius: 5px;
+    margin-top: 9px;
+    position: relative;
+  }
+  
+  .custom-progress {
+    background-color: #bce08a;
+    height: 100%;
+    width: 95%; /* Adjust based on step (increase the width for progress) */
+    border-radius: 5px;
+  }
+  
+  .custom-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333;
+    font-family: "Poppins";
+    padding-left: 10%;
+    padding-top: 3%;
+  }
+  
+  h2 strong {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Food Grid */
+  .foodGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .foodItem {
+    background-color: #fff;
+    border: 2px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: border 0.3s;
+  }
+  
+  .foodItem:hover {
+    border-color: #bce08a;
+  }
+  
+  .selected {
+    border-color: #00bfff;
+    background-color: #f0f8ff;
+  }
+  
+  .foodIcon {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .foodName {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    color: #666;
+  }
+  
+  .customBtn {
+    background-color: #bce08a;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 40px !important;
+    width: 40% !important;
+    text-transform: uppercase;
+  }
+  
+  .customBtn:hover {
+    background-color: #9ccd5e;
+  }
+  /* Remove border on focus for all input fields */
+input:focus {
+  outline: none; /* Remove the default outline */
+  border: none; /* Remove the border on focus */
+  box-shadow: none; /* Remove any focus shadow */
+}
+.errorText {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  text-align: center;
+}
+@media screen and (max-width: 915px) {
+  .custom-container {
+    padding: 5% 5%;
+  }
+
+  .custom-progress-bar {
+    height: 6px;
+  }
+
+  .custom-container h2 {
+    font-size: 1.2em;
+    padding-left: 5%;
+  }
+
+  /* Adjust the grid to have fewer columns and reduce gaps for smaller screens */
+  .foodGrid {
+    grid-template-columns: repeat(2, 1fr); /* Show 2 items per row */
+    gap: 15px;
+  }
+
+  .foodItem {
+    padding: 15px;
+  }
+
+  .foodIcon {
+    font-size: 40px;
+    margin-bottom: 5px;
+  }
+
+  .foodName {
+    font-size: 14px;
+  }
+
+  .customBtn {
+    width: 80%; /* Increase button width for easier tapping */
+    padding: 12px;
+    margin-top: 20px;
+  }
+}
