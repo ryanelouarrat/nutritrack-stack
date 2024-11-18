@@ -267,14 +267,14 @@ const WeightProgress = () => {
     const fetchData = async () => {
       try {
         // Fetch authenticated user profile data
-        const profileResponse = await axios.get("https://localhost:8080/users/me", {
+        const profileResponse = await axios.get("https://backend-vmt0.onrender.com/users/me", {
           withCredentials: true,
         });
         setProfile(profileResponse.data);
 
         // Fetch weight logs for the authenticated user
         const weightLogsResponse = await axios.get(
-          `https://localhost:8080/dailylogs/user/${profileResponse.data.id}/last30days`
+          `https://backend-vmt0.onrender.com/dailylogs/user/${profileResponse.data.id}/last30days`
         );
         const sortedLogs = weightLogsResponse.data.sort(
           (a, b) => new Date(a.date) - new Date(b.date)
@@ -392,7 +392,7 @@ const WeightProgress = () => {
 
   const handleLogout = () => {
     axios
-      .post("https://localhost:8080/users/logout", {}, { withCredentials: true })
+      .post("https://backend-vmt0.onrender.com/users/logout", {}, { withCredentials: true })
       .then(() => navigate("/login"))
       .catch((err) => console.error("Error during logout:", err));
   };

@@ -17,7 +17,7 @@ const WeeklyLog = () => {
         try {
           // Fetch daily log details
           const logResponse = await axios.get(
-            `https://localhost:8080/dailylogs/user/${userId}`,
+            `https://backend-vmt0.onrender.com/dailylogs/user/${userId}`,
             {
               params: { date: selectedDate.toISOString().split("T")[0] },
               withCredentials: true,
@@ -27,7 +27,7 @@ const WeeklyLog = () => {
 
           // Fetch meals only for the selected date
           const mealsResponse = await axios.get(
-            `https://localhost:8080/meals/user/${userId}/date`,
+            `https://backend-vmt0.onrender.com/meals/user/${userId}/date`,
             {
               params: { date: selectedDate.toISOString().split("T")[0] },
               withCredentials: true,
@@ -38,7 +38,7 @@ const WeeklyLog = () => {
           const mealsWithItems = await Promise.all(
             meals.map(async (meal) => {
               const foodItemsResponse = await axios.get(
-                `https://localhost:8080/meals/${meal.mealId}/fooditems`,
+                `https://backend-vmt0.onrender.com/meals/${meal.mealId}/fooditems`,
                 {
                   withCredentials: true,
                 }

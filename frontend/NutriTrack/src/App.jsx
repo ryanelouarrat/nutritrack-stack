@@ -32,7 +32,7 @@ function MainApp() {
   useEffect(() => {
     const checkAuthentication = async () => {
       try {
-        const response = await axios.get("https://localhost:8080/users/verifyToken", { withCredentials: true });
+        const response = await axios.get("https://backend-vmt0.onrender.com/users/verifyToken", { withCredentials: true });
         setIsAuthenticated(response.data.isAuthenticated);
       } catch (error) {
         console.error("Authentication check failed:", error);

@@ -245,7 +245,7 @@ const AccountSettings = () => {
   const [passwordError, setPasswordError] = useState("");
   const handleLogout = () => {
     axios
-      .post("https://localhost:8080/users/logout", {}, { withCredentials: true })
+      .post("https://backend-vmt0.onrender.com/users/logout", {}, { withCredentials: true })
       .then(() => navigate("/login"))
       .catch((err) => console.error("Error during logout:", err));
   };
@@ -280,7 +280,7 @@ const AccountSettings = () => {
       setLoading(true);
       try {
         const profileResponse = await axios.get(
-          "https://localhost:8080/users/me",
+          "https://backend-vmt0.onrender.com/users/me",
           { withCredentials: true }
         );
         const profileData = profileResponse.data.profile;
@@ -352,7 +352,7 @@ const AccountSettings = () => {
     }
 
     try {
-      await axios.put("https://localhost:8080/users/update", updatedProfile, {
+      await axios.put("https://backend-vmt0.onrender.com/users/update", updatedProfile, {
         withCredentials: true,
       });
       alert("Profile updated successfully!");
@@ -391,7 +391,7 @@ const AccountSettings = () => {
 
     try {
       await axios.put(
-        "https://localhost:8080/users/changePassword",
+        "https://backend-vmt0.onrender.com/users/changePassword",
         { currentPassword, newPassword },
         { withCredentials: true }
       );

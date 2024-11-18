@@ -265,7 +265,7 @@ const WeeklyLog = () => {
   useEffect(() => {
     const fetchProfileData = async () => {
       try {
-        const response = await axios.get("https://localhost:8080/users/me", {
+        const response = await axios.get("https://backend-vmt0.onrender.com/users/me", {
           withCredentials: true,
         });
         const { id, ...profileData } = response.data;
@@ -285,7 +285,7 @@ const WeeklyLog = () => {
     const fetchFavoriteMeals = async () => {
       try {
         const response = await axios.get(
-          `https://localhost:8080/meals/favorites/${userId}`
+          `https://backend-vmt0.onrender.com/meals/favorites/${userId}`
         );
         setFavoriteMeals(response.data);
       } catch (error) {
@@ -303,7 +303,7 @@ const WeeklyLog = () => {
     const fetchFavoriteMeals = async () => {
       try {
         const response = await axios.get(
-          `https://localhost:8080/meals/favorites/${userId}`
+          `https://backend-vmt0.onrender.com/meals/favorites/${userId}`
         );
         setFavoriteMeals(response.data);
       } catch (error) {
@@ -348,7 +348,7 @@ const WeeklyLog = () => {
 
     try {
       const response = await axios.get(
-        `https://localhost:8080/meals/${mealId}/fooditems`
+        `https://backend-vmt0.onrender.com/meals/${mealId}/fooditems`
       );
       const fetchedFoodItems = response.data;
 
@@ -482,7 +482,7 @@ const WeeklyLog = () => {
     try {
       // Create the meal
       const mealResponse = await axios.post(
-        "https://localhost:8080/meals",
+        "https://backend-vmt0.onrender.com/meals",
         mealData
       );
       const createdMeal = mealResponse.data;
@@ -501,7 +501,7 @@ const WeeklyLog = () => {
       // Create food items
       await Promise.all(
         foodItemsData.map((foodItemData) =>
-          axios.post("https://localhost:8080/fooditems", foodItemData)
+          axios.post("https://backend-vmt0.onrender.com/fooditems", foodItemData)
         )
       );
 
@@ -511,7 +511,7 @@ const WeeklyLog = () => {
 
       // Fetch or Create Daily Log
       const dailyLogResponse = await axios.get(
-        `https://localhost:8080/dailylogs/user/${userId}?date=${dateString}`
+        `https://backend-vmt0.onrender.com/dailylogs/user/${userId}?date=${dateString}`
       );
 
       if (dailyLogResponse.data && dailyLogResponse.data.id) {
@@ -561,7 +561,7 @@ const WeeklyLog = () => {
         };
 
         await axios.put(
-          `https://localhost:8080/dailylogs/${dailyLogId}`,
+          `https://backend-vmt0.onrender.com/dailylogs/${dailyLogId}`,
           updatedLog
         );
       } else {
@@ -591,7 +591,7 @@ const WeeklyLog = () => {
         };
 
         const createdLogResponse = await axios.post(
-          `https://localhost:8080/dailylogs/create?userId=${userId}`,
+          `https://backend-vmt0.onrender.com/dailylogs/create?userId=${userId}`,
           newDailyLog
         );
 
@@ -599,7 +599,7 @@ const WeeklyLog = () => {
       }
 
       // Associate meal with daily log
-      await axios.post(`https://localhost:8080/dailylogs/${dailyLogId}/meals`, [
+      await axios.post(`https://backend-vmt0.onrender.com/dailylogs/${dailyLogId}/meals`, [
         createdMeal.mealId,
       ]);
 
@@ -634,7 +634,7 @@ const WeeklyLog = () => {
           handleLogout={() => {
             axios
               .post(
-                "https://localhost:8080/users/logout",
+                "https://backend-vmt0.onrender.com/users/logout",
                 {},
                 { withCredentials: true }
               )
@@ -671,7 +671,7 @@ const WeeklyLog = () => {
             onClick={() => {
               axios
                 .post(
-                  "https://localhost:8080/users/logout",
+                  "https://backend-vmt0.onrender.com/users/logout",
                   {},
                   { withCredentials: true }
                 )

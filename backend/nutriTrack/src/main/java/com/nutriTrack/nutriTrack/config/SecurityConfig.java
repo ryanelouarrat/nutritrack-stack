@@ -65,9 +65,8 @@ public class SecurityConfig {
 public CorsConfigurationSource corsConfigurationSource() {
     CorsConfiguration configuration = new CorsConfiguration();
     configuration.setAllowedOrigins(Arrays.asList(
-        "http://localhost:5173",
-        "http://192.168.1.60:5173", // Replace with your host IP
-        "http://frontend:5173"  // Docker service name
+        "https://frontend-539c.onrender.com", // Frontend hosted on Render
+        "https://localhost:5173" // Local development, optional
     ));
     configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
     configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type", "X-Requested-With"));
@@ -78,5 +77,6 @@ public CorsConfigurationSource corsConfigurationSource() {
     source.registerCorsConfiguration("/**", configuration);
     return source;
 }
+
 
 }

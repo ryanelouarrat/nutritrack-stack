@@ -100,7 +100,7 @@ const Signup = () => {
 
     try {
       // Send the User data
-      const userResponse = await axios.post('https://localhost:8080/users', userData);
+      const userResponse = await axios.post('https://backend-vmt0.onrender.com/users', userData);
 
       // After successfully creating user, redirect to the dashboard with the user data
       navigate('/dashboard', { state: { userId: userResponse.data.id } });

@@ -239,7 +239,7 @@ const WeeklyLog = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await axios.get("https://localhost:8080/users/me", {
+        const response = await axios.get("https://backend-vmt0.onrender.com/users/me", {
           withCredentials: true,
         });
         const { id, ...profileData } = response.data;
@@ -259,7 +259,7 @@ const WeeklyLog = () => {
       setLoading(true);
       try {
         const logResponse = await axios.get(
-          `https://localhost:8080/dailylogs/user/${userId}`,
+          `https://backend-vmt0.onrender.com/dailylogs/user/${userId}`,
           {
             params: { date: selectedDate.toISOString().split("T")[0] },
             withCredentials: true,
@@ -268,7 +268,7 @@ const WeeklyLog = () => {
         setDailyLog(logResponse.data);
 
         const mealsResponse = await axios.get(
-          `https://localhost:8080/meals/user/${userId}/date`,
+          `https://backend-vmt0.onrender.com/meals/user/${userId}/date`,
           {
             params: { date: selectedDate.toISOString().split("T")[0] },
             withCredentials: true,
@@ -279,7 +279,7 @@ const WeeklyLog = () => {
         const mealsWithItems = await Promise.all(
           meals.map(async (meal) => {
             const foodItemsResponse = await axios.get(
-              `https://localhost:8080/meals/${meal.mealId}/fooditems`,
+              `https://backend-vmt0.onrender.com/meals/${meal.mealId}/fooditems`,
               { withCredentials: true }
             );
             return { ...meal, foodItems: foodItemsResponse.data };
@@ -315,7 +315,7 @@ const WeeklyLog = () => {
           handleLogout={() => {
             axios
               .post(
-                "https://localhost:8080/users/logout",
+                "https://backend-vmt0.onrender.com/users/logout",
                 {},
                 { withCredentials: true }
               )
@@ -352,7 +352,7 @@ const WeeklyLog = () => {
             onClick={() => {
               axios
                 .post(
-                  "https://localhost:8080/users/logout",
+                  "https://backend-vmt0.onrender.com/users/logout",
                   {},
                   { withCredentials: true }
                 )

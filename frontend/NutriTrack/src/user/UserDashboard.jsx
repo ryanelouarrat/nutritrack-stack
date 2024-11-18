@@ -30,7 +30,7 @@ const DietTrackerLayout = () => {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          `https://localhost:8080/users/${userId}`
+          `https://backend-vmt0.onrender.com/users/${userId}`
         );
         setTodayWeight(response.data.weight || 0);
       } catch (err) {
@@ -41,7 +41,7 @@ const DietTrackerLayout = () => {
     const fetchWeightLogs = async () => {
       try {
         const response = await axios.get(
-          `https://localhost:8080/dailylogs/user/${userId}/last30days`
+          `https://backend-vmt0.onrender.com/dailylogs/user/${userId}/last30days`
         );
         setWeightLogs(response.data);
       } catch (error) {
@@ -52,7 +52,7 @@ const DietTrackerLayout = () => {
     const fetchDailyLog = async () => {
       try {
         const response = await axios.get(
-          `https://localhost:8080/dailylogs/user/${userId}?date=${today}`
+          `https://backend-vmt0.onrender.com/dailylogs/user/${userId}?date=${today}`
         );
         const dailyLog = response.data;
         if (dailyLog) {
@@ -72,19 +72,19 @@ const DietTrackerLayout = () => {
       try {
         // Fetch the user profile data (target macros)
         const userProfileResponse = await axios.get(
-          `https://localhost:8080/users/${userId}`
+          `https://backend-vmt0.onrender.com/users/${userId}`
         );
         const profile = userProfileResponse.data.profile;
 
         // Fetch today's daily log data (consumed macros)
         const dailyLogResponse = await axios.get(
-          `https://localhost:8080/dailylogs/user/${userId}?date=${today}`
+          `https://backend-vmt0.onrender.com/dailylogs/user/${userId}?date=${today}`
         );
         const dailyLog = dailyLogResponse.data;
 
         // Fetch user's favorite food items
         const favoriteMealsResponse = await axios.get(
-          `https://localhost:8080/meals/favorites/${userId}`
+          `https://backend-vmt0.onrender.com/meals/favorites/${userId}`
         );
         const favoriteMeals = favoriteMealsResponse.data;
 
@@ -105,7 +105,7 @@ const DietTrackerLayout = () => {
 
         // Send the request to the recommendation service with real user data
         const response = await axios.post(
-          "https://localhost:8080/recommendation/generate",
+          "https://backend-vmt0.onrender.com/recommendation/generate",
           {
             user_macros: remainingMacros,
             user_favorites: favoriteFoods, // Use actual favorite food items
@@ -137,23 +137,23 @@ const DietTrackerLayout = () => {
   const handleWeightSubmit = async () => {
     try {
       const weightResponse = await axios.get(
-        `https://localhost:8080/dailylogs/user/${userId}?date=${today}`
+        `https://backend-vmt0.onrender.com/dailylogs/user/${userId}?date=${today}`
       );
       if (weightResponse.data) {
         let dailyLogId = weightResponse.data.id;
         const updatedLog = { ...weightResponse.data, weight: todayWeight };
         await axios.put(
-          `https://localhost:8080/dailylogs/${dailyLogId}`,
+          `https://backend-vmt0.onrender.com/dailylogs/${dailyLogId}`,
           updatedLog
         );
       } else {
         const newLog = { userId: userId, date: today, weight: todayWeight };
         await axios.post(
-          `https://localhost:8080/dailylogs/create?userId=${userId}`,
+          `https://backend-vmt0.onrender.com/dailylogs/create?userId=${userId}`,
           newLog
         );
       }
-      await axios.put(`https://localhost:8080/users/${userId}/weight`, null, {
+      await axios.put(`https://backend-vmt0.onrender.com/users/${userId}/weight`, null, {
         params: { weight: todayWeight },
       });
       setShowModal(false);
@@ -213,7 +213,7 @@ const DietTrackerLayout = () => {
           onClick={() => {
             axios
               .post(
-                "https://localhost:8080/users/logout",
+                "https://backend-vmt0.onrender.com/users/logout",
                 {},
                 { withCredentials: true }
               )

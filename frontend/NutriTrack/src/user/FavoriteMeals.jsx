@@ -243,7 +243,7 @@ const FavoriteMeals = () => {
     const fetchData = async () => {
       try {
         const profileResponse = await axios.get(
-          "https://localhost:8080/users/me",
+          "https://backend-vmt0.onrender.com/users/me",
           {
             withCredentials: true,
           }
@@ -252,7 +252,7 @@ const FavoriteMeals = () => {
         const userId = profileResponse.data.id;
 
         const response = await axios.get(
-          `https://localhost:8080/meals/favorites/${userId}`
+          `https://backend-vmt0.onrender.com/meals/favorites/${userId}`
         );
         setFavoriteMeals(response.data || []);
       } catch (error) {
@@ -267,7 +267,7 @@ const FavoriteMeals = () => {
   }, [navigate]);
   const handleLogout = () => {
     axios
-      .post("https://localhost:8080/users/logout", {}, { withCredentials: true })
+      .post("https://backend-vmt0.onrender.com/users/logout", {}, { withCredentials: true })
       .then(() => navigate("/login"))
       .catch((err) => console.error("Error during logout:", err));
   };

@@ -56,7 +56,7 @@ const SignupFlow = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const userResponse = await axios.post('https://localhost:8080/users/register', { ...formData });
+      const userResponse = await axios.post('https://backend-vmt0.onrender.com/users/register', { ...formData });
       navigate('/dashboard', { state: { userId: userResponse.data.id } });
       console.log("User created successfully");
     } catch (error) {

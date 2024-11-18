@@ -19,7 +19,7 @@ const MealForm = () => {
     const fetchFavoriteMeals = async () => {
       try {
         const response = await axios.get(
-          `https://localhost:8080/meals/favorites/${userIdr}`
+          `https://backend-vmt0.onrender.com/meals/favorites/${userIdr}`
         );
         setFavoriteMeals(response.data);
       } catch (error) {
@@ -58,7 +58,7 @@ const MealForm = () => {
     try {
       // Fetch the food items associated with the selected favorite meal
       const response = await axios.get(
-        `https://localhost:8080/meals/${mealId}/fooditems`
+        `https://backend-vmt0.onrender.com/meals/${mealId}/fooditems`
       );
       const foodItems = response.data;
 
@@ -191,7 +191,7 @@ const MealForm = () => {
     try {
       // Create the meal
       const mealResponse = await axios.post(
-        "https://localhost:8080/meals",
+        "https://backend-vmt0.onrender.com/meals",
         mealData
       );
       const createdMeal = mealResponse.data;
@@ -210,7 +210,7 @@ const MealForm = () => {
       // Create food items
       await Promise.all(
         foodItemsData.map((foodItemData) =>
-          axios.post("https://localhost:8080/fooditems", foodItemData)
+          axios.post("https://backend-vmt0.onrender.com/fooditems", foodItemData)
         )
       );
 
@@ -220,7 +220,7 @@ const MealForm = () => {
 
       // Fetch daily log by userId and date
       const dailyLogResponse = await axios.get(
-        `https://localhost:8080/dailylogs/user/${userIdr}?date=${dateString}`
+        `https://backend-vmt0.onrender.com/dailylogs/user/${userIdr}?date=${dateString}`
       );
 
       if (dailyLogResponse.data && dailyLogResponse.data.id) {
@@ -271,7 +271,7 @@ const MealForm = () => {
 
         // Update the existing daily log with the new nutrients
         await axios.put(
-          `https://localhost:8080/dailylogs/${dailyLogId}`,
+          `https://backend-vmt0.onrender.com/dailylogs/${dailyLogId}`,
           updatedLog
         );
       } else {
@@ -300,7 +300,7 @@ const MealForm = () => {
         };
 
         const createdLogResponse = await axios.post(
-          `https://localhost:8080/dailylogs/create?userId=${userIdr}`,
+          `https://backend-vmt0.onrender.com/dailylogs/create?userId=${userIdr}`,
           newDailyLog
         );
 
@@ -308,7 +308,7 @@ const MealForm = () => {
       }
 
       // Log the meal into the DailyLogs
-      await axios.post(`https://localhost:8080/dailylogs/${dailyLogId}/meals`, [
+      await axios.post(`https://backend-vmt0.onrender.com/dailylogs/${dailyLogId}/meals`, [
         createdMeal.mealId,
       ]);
 

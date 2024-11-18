@@ -17,7 +17,7 @@ const ForgotPage = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        "https://localhost:8080/api/password/forgot",
+        "https://backend-vmt0.onrender.com/api/password/forgot",
         { email }
       );
       setMessage("Check your inbox for the password reset link.");

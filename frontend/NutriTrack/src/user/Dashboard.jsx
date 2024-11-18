@@ -296,7 +296,7 @@ function Dashboard() {
     const fetchProfile = async () => {
       try {
         const profileResponse = await axios.get(
-          "https://localhost:8080/users/me",
+          "https://backend-vmt0.onrender.com/users/me",
           {
             withCredentials: true,
           }
@@ -320,7 +320,7 @@ function Dashboard() {
       try {
         // Fetch today's daily log
         const dailyLogResponse = await axios.get(
-          `https://localhost:8080/dailylogs/user/${userId}`,
+          `https://backend-vmt0.onrender.com/dailylogs/user/${userId}`,
           { params: { date: today } }
         );
         if (dailyLogResponse.data) {
@@ -335,13 +335,13 @@ function Dashboard() {
 
         // Fetch weight logs for the last 30 days
         const weightLogsResponse = await axios.get(
-          `https://localhost:8080/dailylogs/user/${userId}/last30days`
+          `https://backend-vmt0.onrender.com/dailylogs/user/${userId}/last30days`
         );
         setWeightLogs(weightLogsResponse.data || []);
 
         // Fetch today's meals
         const mealsResponse = await axios.get(
-          `https://localhost:8080/meals/user/${userId}/date`,
+          `https://backend-vmt0.onrender.com/meals/user/${userId}/date`,
           { params: { date: today } }
         );
         setMealId(mealsResponse.data.id);
@@ -380,7 +380,7 @@ function Dashboard() {
 
         // Generate recommendations
         const recommendationsResponse = await axios.post(
-          `https://localhost:8080/recommendation/generate`,
+          `https://backend-vmt0.onrender.com/recommendation/generate`,
           {
             user_macros: remainingMacros,
             user_favorites: favoriteFoods,
@@ -458,21 +458,21 @@ function Dashboard() {
   const handleWeightSubmit = async () => {
     try {
       const weightResponse = await axios.get(
-        `https://localhost:8080/dailylogs/user/${userId}?date=${today}`
+        `https://backend-vmt0.onrender.com/dailylogs/user/${userId}?date=${today}`
       );
       if (weightResponse.data) {
         const updatedLog = { ...weightResponse.data, weight: todayWeight };
         await axios.put(
-          `https://localhost:8080/dailylogs/${weightResponse.data.id}`,
+          `https://backend-vmt0.onrender.com/dailylogs/${weightResponse.data.id}`,
           updatedLog
         );
       } else {
         await axios.post(
-          `https://localhost:8080/dailylogs/create?userId=${userId}`,
+          `https://backend-vmt0.onrender.com/dailylogs/create?userId=${userId}`,
           { date: today, weight: todayWeight }
         );
       }
-      await axios.put(`https://localhost:8080/users/${userId}/weight`, null, {
+      await axios.put(`https://backend-vmt0.onrender.com/users/${userId}/weight`, null, {
         params: { weight: todayWeight },
       });
       window.location.reload();
@@ -524,7 +524,7 @@ function Dashboard() {
 
     try {
       const response = await axios.delete(
-        `https://localhost:8080/dailylogs/${dailyLogId}/meals/${mealId}`
+        `https://backend-vmt0.onrender.com/dailylogs/${dailyLogId}/meals/${mealId}`
       );
 
       if (response.status === 200) {
@@ -553,7 +553,7 @@ function Dashboard() {
 
   const handleLogout = () => {
     axios
-      .post("https://localhost:8080/users/logout", {}, { withCredentials: true })
+      .post("https://backend-vmt0.onrender.com/users/logout", {}, { withCredentials: true })
       .then(() => navigate("/login"))
       .catch((err) => console.error("Error during logout:", err));
   };
